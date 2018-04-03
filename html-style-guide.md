@@ -20,13 +20,13 @@
 - 对于内容较为简单的表格，建议将tr写成单行。
 - 也可以在大的模块之间用空行隔开，使模块更清晰。
 - 结构上如果可以并列书写，就不要嵌套。
-- 如果可以写成\<div></div><div></div>那么就不要写成\<div><div></div></div>
+- 如果可以写成\<div>\</div>\<div>\</div>那么就不要写成\<div>\<div>\</div>\</div>
 - 如果结构已经可以满足视觉和语义的要求，那么就不要有额外的冗余的结构。
-- 比如\<div><h2></h2></div>已经能满足要求，那么就不要再写成\<div><div><h2></h2></div></div>
+- 比如\<div><h2></h2></div>已经能满足要求，那么就不要再写成\<div>\<div>\<h2>\</h2>\</div>\</div>
 - 一个标签上引用的className不要过多，越少越好。
-- 比如不要出现这种情况：<div class="class1 class2 class3 class4"></div>
+- 比如不要出现这种情况：\<div class="class1 class2 class3 class4">\</div>
 - 对于一个语义化的内部标签，应尽量避免使用className。
-- 比如在这样一个列表中，li标签中的itm应去除：<ul class="m-help"><li class="itm"></li><li class="itm"></li></ul>
+- 比如在这样一个列表中，li标签中的itm应去除：\<ul class="m-help">\<li class="itm">\</li>\<li class="itm">\</li>\</ul>
 
 ##### 说明文案的注释方法 --—(采用类似标签闭合的写法，与HTML统一格式；注释文案两头空格，与CSS注释统一格式。)
 - 开始注释：<!-- 注释文案 -->（文案两头空格）。
