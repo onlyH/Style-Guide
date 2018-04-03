@@ -1,10 +1,4 @@
-﻿
-*HTMLt规范*
-
-## 目录
-
- 
-﻿
+﻿|
 *HTMLt规范*
 
 #### HTML基础设施--标签语义化参考html(5)
@@ -33,6 +27,9 @@
 - 比如不要出现这种情况：<div class="class1 class2 class3 class4"></div>
 - 对于一个语义化的内部标签，应尽量避免使用className。
 - 比如在这样一个列表中，li标签中的itm应去除：<ul class="m-help"><li class="itm"></li><li class="itm"></li></ul>
+
+
+
 
 ##### 说明文案的注释方法 --—(采用类似标签闭合的写法，与HTML统一格式；注释文案两头空格，与CSS注释统一格式。)
 - 开始注释：<!-- 注释文案 -->（文案两头空格）。
@@ -83,42 +80,42 @@
 | ------| ------ | ------ |------ |
 | <a></a>	 | 超链接/锚	 | a不可嵌套a	 |href,name,title,rel,target |
 | <br /> | 换行	 |
-|<button></button>	|按钮	|不可嵌套表单元素|	type,disabled
-|<dd></dd>|	定义列表中的定义（描述内容）|	只能以dl为父容器，对应一个dt	 
-|<del></del>|	文本删除	 	 
-|<div></div>|	块级容器	 	 
-|<dl></dl>|	定义列表|	只能嵌套dt和dd	 
-|<dt></dt>|	定义列表中的定义术语|	只能以dl为父容器，对应多个dd	 
-|<em></em>|	强调文本	 	 
-|<form></form>|	表单|	 	action,target,method,name
-|<h1></h1>|	标题	|从h1到h6，不可嵌套块级元素	 
-|<iframe></iframe>|	内嵌一个网页	 |	|frameborder,width,height,src,scrolling,name
-|<img />|	图像	 |	alt,src,width,height
-|<input />	|各种表单控件	 |	type,name,value,checked,disabled,maxlength,readonly,accesskey
-|<label></label>|	标签为input元素定义标注	 	for
-|<li></li>|	列表项|	只能以ul或ol为父容器	 
-|<link />|	|引用样式或icon|	不可嵌套任何元素|	type,rel,href
-|<meta />|	文档信息|	只用于head|	content,http-equiv,name
+|<button></button>	|按钮	|不可嵌套表单元素|	type,disabled|
+|<dd></dd>|	定义列表中的定义（描述内容）|	只能以dl为父容器，对应一个dt	 |
+|<del></del>|	文本删除	 	 |
+|<div></div>|	块级容器	 |	 
+|<dl></dl>|	定义列表|	只能嵌套dt和dd	 |
+|<dt></dt>|	定义列表中的定义术语|	只能以dl为父容器，对应多个dd	 |
+|<em></em>|	强调文本	 |	 
+|<form></form>|	表单|	 	action,target,method,name|
+|<h1></h1>|	标题	|从h1到h6，不可嵌套块级元素	 |
+|<iframe></iframe>|	内嵌一个网页	 |	|frameborder,width,height,src,scrolling,name|
+|<img />|	图像	 |	alt,src,width,height|
+|<input />	|各种表单控件	 |	type,name,value,checked,disabled,maxlength,readonly,accesskey|
+|<label></label>|	标签为input元素定义标注	| 	for|
+|<li></li>|	列表项|	只能以ul或ol为父容器|	 
+|<link />|	|引用样式或icon|	不可嵌套任何元素|	type,rel,href|
+|<meta />|	文档信息|	只用于head|	content,http-equiv,name|
 |<ol></ol>	|有序列表|	只能嵌套li|	 
-|<option></option>|	select中的一个选项|	仅用于select|	value,selected,disabled
-|<p></p>|段落|	不能嵌套块级元素	 
-|<script></script>|	引用脚本|	不可嵌套任何元素|	type,src
-|<select></select>|	列表框或下拉框|	只能嵌套option或optgroup	name,disabled,multiple
-|<span></span>|	内联容器	 	 
+|<option></option>|	select中的一个选项|	仅用于select|	value,selected,disabled|
+|<p></p>|段落|	不能嵌套块级元素|	 
+|<script></script>|	引用脚本|	不可嵌套任何元素|	type,src|
+|<select></select>|	列表框或下拉框|	只能嵌套option或optgroup|	name,disabled,multiple
+|<span></span>|	内联容器	| 	 
 |<strong></strong>	|强调文本|	 	 
-|<style></style>|	引用样式|	不可嵌套任何元素|	type,media
+|<style></style>|	引用样式|	不可嵌套任何元素|	type,media|
 |<sub></sub>|	下标|	 	 
 |<sup></sup>|	上标	| 	 
-|<table></table>|	表格|	只可嵌套表格元素	width,align,background,cellpadding,cellspacing,summary,border
-|<tbody></tbody>	|表格主体|	只用于table	 
-|<td></td>|	表格中的单元格|	只用于tr	colspan,rowspan
-|<textarea></textarea>|	多行文本输入控件	 	name,accesskey,disabled,readonly,rows,cols
-|<tfoot></tfoot>|	表格表尾|	只用于table	 
-|<th></th>|	表格中的标题单元格	只用于tr	colspan,rowspan
-|<thead></thead>|	表格表头|	只用于table	 
-|<title></title>|	文档标题|	只用于head	 
-|<tr></tr>|	表格行|	嵌套于table或thead、tbody、tfoot	 
-|<ul></ul>|	无序列表|	只能嵌套li	
+|<table></table>|	表格|	只可嵌套表格元素|	width,align,background,cellpadding,cellspacing,summary,border|
+|<tbody></tbody>	|表格主体|	只用于table	 |
+|<td></td>|	表格中的单元格|	只用于tr|	colspan,rowspan|
+|<textarea></textarea>|	多行文本输入控件	 |	name,accesskey,disabled,readonly,rows,cols|
+|<tfoot></tfoot>|	表格表尾|	只用于table	 |
+|<th></th>|	表格中的标题单元格	只用于tr	colspan,rowspan|
+|<thead></thead>|	表格表头|	只用于table	 |
+|<title></title>|	文档标题|	只用于head	| 
+|<tr></tr>|	表格行|	嵌套于table或thead、tbody、tfoot|	 
+|<ul></ul>|	无序列表|	只能嵌套li	|
 
 ##### 内容类型决定使用的语义标签
 在网页中某种类型的内容必定需要某种特定的HTML标签来承载，也就是我们常常提到的根据你的内容语义化HTML结构
@@ -126,10 +123,10 @@
 ##### 加强“资源型”内容的可访问性和可用性
 在资源型的内容上加入描述文案，比如给img添加alt属性，在audio内加入文案和链接等等。
 
-###### 加强“不可见”内容的可访问性
+##### 加强“不可见”内容的可访问性
 背景图上的文字应该同时写在html中，并使用css使其不可见，有利于搜索引擎抓取你的内容，也可以在css失效的情况下看到内容。
 
-###### 适当使用实体
+##### 适当使用实体
 以实体代替与HTML语法相同的字符，避免浏览解析错误。
 
 | 字符 | 名称	 | 实体名	 |实体数
