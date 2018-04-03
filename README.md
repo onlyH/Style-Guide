@@ -1,7 +1,7 @@
 ## 代码规范
-#### html规范： html-style-guide
-#### css规范 ：css-style-guide
-#### javascript规范： javascript-style-guide
+#### html规范： [html-style-guide](https://github.com/onlyH/Style-Guide/blob/master/html-style-guide.md)
+#### css规范 ：[css-style-guide](https://github.com/onlyH/Style-Guide/blob/master/css-style-guide.md)
+#### javascript规范： [javascript-style-guide](https://github.com/onlyH/Style-Guide/blob/master/css-style-guide.md)
 #### vue规范： 请参考vue文档 [vue风格指南](https://cn.vuejs.org/v2/style-guide/)，[github](https://github.com/pablohpsilva/vuejs-component-style-guide/blob/master/README-CN.md)
 #### 语言包中key的命名规则：
 
