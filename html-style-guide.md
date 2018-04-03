@@ -1,8 +1,35 @@
-
+﻿
 *HTML规范*
 
 #### HTML基础设施--标签语义化参考html(5)
 
+```
+<!-- good -->
+<p>Esprima serves as an important <strong>building block</strong> for some JavaScript language tools.</p>
+
+<!-- bad -->
+<div>Esprima serves as an important <span class="strong">building block</span> for some JavaScript language tools.</div>
+```
+##### 标签的使用应尽量简洁，减少不必要的标签。
+```
+<!-- good -->
+<img class="avatar" src="image.png">
+
+<!-- bad -->
+<span class="avatar">
+    <img src="image.png">
+</span>
+```
+##### 布尔类型的属性，建议不添加属性值。
+```
+<input type="text" disabled>
+<input type="checkbox" value="1" checked>
+```
+##### 自定义属性建议以 xxx- 为前缀，推荐使用 data-。
+使用前缀有助于区分自定义属性和标准定义的属性。
+```
+<ol data-ui-type="Select"></ol>
+```
 ##### 结构顺序和视觉顺序基本保持一致
 
 - 按照从上至下、从左到右的视觉顺序书写HTML结构。
@@ -144,3 +171,107 @@
 |×|	乘|	\&times;|\&#215;
 |÷|	除|	\&divide;|	\&#247;
 |‰|	千分比|	\&permil;|	\&#8240;
+
+#### head
+
+##### 引入 CSS 时必须指明 rel="stylesheet"。
+```
+<link rel="stylesheet" href="page.css">
+```
+##### 引入 CSS 和 JavaScript 时无须指明 type 属性。
+```
+text/css 和 text/javascript 是 type 的默认值。
+```
+#####  JavaScript 应当放在页面末尾，或采用异步加载。
+将 script 放在页面中间将阻断页面的渲染。出于性能方面的考虑，如非必要，请遵守此条建议。
+```
+<body>
+    <!-- a lot of elements -->
+    <script src="init-behavior.js"></script>
+</body>
+```
+##### 若页面欲对移动设备友好，需指定页面的 viewport。
+
+#### 图片
+##### 禁止 img 的 src 取值为空。延迟加载的图片也要增加默认的 src。
+src 取值为空，会导致部分浏览器重新加载一次当前页面
+
+##### 避免为 img 添加不必要的 title 属性。
+多余的 title 影响看图体验，并且增加了页面尺寸。
+
+##### 重要图片添加 alt 属性。
+可以提高图片加载失败时的用户体验。
+
+##### 添加 width 和 height 属性，以避免页面抖动。
+
+##### 有下载需求的图片采用 img 标签实现，无下载需求的图片采用 CSS 背景图实现。
+1. 产品 logo、用户头像、用户产生的图片等有潜在下载需求的图片，以 img 形式实现，能方便用户下载。
+2. 无下载需求的图片，比如：icon、背景、代码使用的图片等，尽可能采用 CSS 背景图实现。
+
+#### 表单
+##### 控件标题,有文本标题的控件必须使用 label 标签将其与其标题相关联。
+1. 将控件置于 label 内。
+2. label 的 for 属性指向控件的 id。
+3. 推荐使用第一种，减少不必要的 id。如果 DOM 结构不允许直接嵌套，则应使用第二种。
+```
+<label><input type="checkbox" name="confirm" value="on"> 我已确认上述条款</label>
+
+<label for="username">用户名：</label> <input type="textbox" name="username" id="username">
+```
+##### 使用 button 元素时必须指明 type 属性值。
+button 元素的默认 type 为 submit，如果被置于 form 元素中，点击后将导致表单提交。为显示区分其作用方便理解，必须给出 type 属性。
+```
+<button type="submit">提交</button>
+<button type="button">取消</button>
+```
+##### 尽量不要使用按钮类元素的 name 属性。
+由于浏览器兼容性问题，使用按钮的 name 属性会带来许多难以发现的问题。
+
+##### 当使用 JavaScript进行表单提交时，如果条件允许，应使原生提交功能正常工作。
+当浏览器 JS 运行错误或关闭 JS 时，提交功能将无法工作。如果正确指定了 form 元素的 action 属性和表单控件的 name 属性时，提交仍可继续进行。
+```
+<form action="/login" method="post">
+    <p><input name="username" type="text" placeholder="用户名"></p>
+    <p><input name="password" type="password" placeholder="密码"></p>
+</form>
+```
+##### 在针对移动设备开发的页面时，根据内容类型指定输入框的 type 属性。
+根据内容类型指定输入框类型，能获得能友好的输入体验。
+```
+<input type="date">
+```
+
+#### 多媒体
+##### 当在现代浏览器中使用 audio 以及 video 标签来播放音频、视频时，应当注意格式。
+音频应尽可能覆盖到如下格式：
+- MP3
+- WAV
+- Ogg
+视频应尽可能覆盖到如下格式：
+- MP4
+- WebM
+- Ogg
+##### 在支持 HTML5 的浏览器中优先使用 audio 和 video 标签来定义音视频元素。
+##### 使用退化到插件的方式来对多浏览器进行支持。
+```
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    <source src="audio.ogg" type="audio/ogg">
+    <object width="100" height="50" data="audio.mp3">
+        <embed width="100" height="50" src="audio.swf">
+    </object>
+</audio>
+
+<video width="100" height="50" controls>
+    <source src="video.mp4" type="video/mp4">
+    <source src="video.ogg" type="video/ogg">
+    <object width="100" height="50" data="video.mp4">
+        <embed width="100" height="50" src="video.swf">
+    </object>
+</video>
+```
+##### 只在必要的时候开启音视频的自动播放。
+##### 在 object 标签内部提供指示浏览器不支持该标签的说明。
+```
+<object width="100" height="50" data="something.swf">DO NOT SUPPORT THIS TAG</object>
+```
