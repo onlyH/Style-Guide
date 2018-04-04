@@ -405,3 +405,17 @@ h1 {
     font-weight: bold;
 }
 ```
+##### 统一语义理解和命名
+
+布局
+| 语义 | 命名 | 简写 |
+| ------| ------ | ------ |
+|文档|	doc|	doc|
+|头部|	head|	hd|
+|主体	|body	|bd|
+|尾部|	foot|	ft|
+|主栏|	main|	mn|
+|主栏子容器	|mainc	|mnc|
+|侧栏|	side	|sd|
+|侧栏子容器	|sidec|	sdc|
+|盒容器	|wrap/box|	wrap/box|
