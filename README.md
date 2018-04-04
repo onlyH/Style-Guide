@@ -3,7 +3,7 @@
 
 ## 代码规范
 #### html规范： [html-style-guide](https://github.com/onlyH/Style-Guide/blob/master/html-style-guide.md)
-#### css规范 ：[css-style-guide](https://github.com/onlyH/Style-Guide/blob/master/css-style-guide.md)[公共样式采取normalize.css]
+#### css规范[公共样式采取normalize.css]：[css-style-guide](https://github.com/onlyH/Style-Guide/blob/master/css-style-guide.md) 
 #### javascript规范： [javascript-style-guide](https://github.com/onlyH/Style-Guide/blob/master/css-style-guide.md)
 #### vue规范： [vue-style-guide](https://github.com/onlyH/Style-Guide/blob/master/vue-style-guide.md)
 #### 语言包中key的命名规则：
