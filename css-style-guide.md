@@ -453,3 +453,43 @@ h1 {
 |标题|	title|	tt|
 |按钮|	button|	btn|
 |输入|	input	|ipt|
+
+功能
+| 语义 | 命名 | 简写 |
+| ------| ------ | ------ |
+浮动清除	clearboth	cb
+向左浮动	floatleft	fl
+向右浮动	floatright	fr
+内联块级	inlineblock	ib
+文本居中	textaligncenter	tac
+文本居右	textalignright	tar
+文本居左	textalignleft	tal
+垂直居中	verticalalignmiddle	vam
+溢出隐藏	overflowhidden	oh
+完全消失	displaynone	dn
+字体大小	fontsize	fs
+字体粗细	fontweight	fw
+
+
+皮肤
+
+| 语义 | 命名 | 简写 |
+| ------| ------ | ------ |
+字体颜色	fontcolor	fc
+背景	background	bg
+背景颜色	backgroundcolor	bgc
+背景图片	backgroundimage	bgi
+背景定位	backgroundposition	bgp
+边框颜色	bordercolor	bdc
+
+状态
+| 语义 | 命名 | 简写 |
+| ------| ------ | ------ |
+选中	selected	sel|
+当前	current	crt
+显示	show	show
+隐藏	hide	hide
+打开	open	open
+关闭	close	close
+出错	error	err
+不可用	disabled	dis
