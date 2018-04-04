@@ -1,9 +1,7 @@
-important 
-
-深紫色文字：<font color="#660066">深紫色文字</font><br /> 
-
-
+<font color=red>important </font> 
 <h3>每天下班前提交代码，上班时第一时间更新代码</h3>
+
+
 
 ## 代码规范
 #### html规范： [html-style-guide](https://github.com/onlyH/Style-Guide/blob/master/html-style-guide.md)
