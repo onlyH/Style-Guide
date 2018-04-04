@@ -1,4 +1,4 @@
-<font color=gray size=72>color=gray</font>
+<font color="#dd0000">浅红色文字：</font>
 <h3>每天下班前提交代码，上班时第一时间更新代码</h3>
 
 ## 代码规范
