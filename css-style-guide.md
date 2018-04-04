@@ -456,20 +456,21 @@ h1 {
 
 
 功能
+
 | 语义 | 命名 | 简写 |
 | ------| ------ | ------ |
-||浮动清除||	clearboth||	cb|
-向左浮动||	floatleft||	fl|
-||向右浮动||	floatright	||fr||
-||内联块级||	inlineblock||	ib||
-||文本居中||	textaligncenter	||tac||
-||文本居右||	textalignright||	tar||
-||文本居左||	textalignleft||	tal||
-||垂直居中||	verticalalignmiddle||	vam||
-||溢出隐藏||	overflowhidden||	oh||
-||完全消失||	displaynone||	dn||
-||字体大小||	fontsize||	fs|
-||字体粗细||	fontweight||	fw||
+|浮动清除|	clearboth|cb|
+|向左浮动|	floatleft|	fl|
+|向右浮动|	floatright	|fr|
+|内联块级|	inlineblock|	ib|
+|文本居中|	textaligncenter	|tac|
+|文本居右|	textalignright|	tar|
+|文本居左|	textalignleft|	tal|
+|垂直居中|	verticalalignmiddle|vam|
+|溢出隐藏|	overflowhidden|	oh|
+|完全消失|	displaynone|	dn|
+|字体大小|	fontsize|	fs|
+|字体粗细|	fontweight|	fw|
 
 
 皮肤
@@ -484,6 +485,7 @@ h1 {
 |边框颜色|	bordercolor	|bdc|
 
 状态
+
 | 语义 | 命名 | 简写 |
 | ------| ------ | ------ |
 |选中|	selected|	sel|
