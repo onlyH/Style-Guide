@@ -10,7 +10,6 @@
   1. [函数](#functions)
   1. [属性](#properties)
   1. [变量](#variables)
-  1. [提升](#hoisting)
   1. [比较运算符 & 等号](#comparison-operators--equality)
   1. [块](#blocks)
   1. [注释](#comments)
@@ -135,7 +134,8 @@
     someStack.push('abracadabra');
     ```
 
-  - 当你需要拷贝数组时，使用 Array#slice。[jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)
+  - 当你需要拷贝数组时，使用 Array#slice。[jsPerf](http://jsperf.com/converting-arguments-to-an-array/7)（数组拷贝的时候不要改变原始值
+）
 
     ```javascript
     var len = items.length;
@@ -181,7 +181,7 @@
     var fullName = 'Bob ' + this.lastName;
     ```
 
-  - 超过 100 个字符的字符串应该使用连接符写成多行。
+  - 一行代码尽量不超过80字符，超过应该使用连接符写成多行。
   - 注：若过度使用，通过连接符连接的长字符串可能会影响性能。[jsPerf](http://jsperf.com/ya-string-concat) & [讨论](https://github.com/airbnb/javascript/issues/40).
 
     ```javascript
@@ -464,109 +464,9 @@
 **[⬆ 回到顶部](#table-of-contents)**
 
 
-## <a name="hoisting">提升</a>
-
-  - 变量声明会提升至作用域顶部，但赋值不会。
-
-    ```javascript
-    // 我们知道这样不能正常工作（假设这里没有名为 notDefined 的全局变量）
-    function example() {
-      console.log(notDefined); // => throws a ReferenceError
-    }
-
-    // 但由于变量声明提升的原因，在一个变量引用后再创建它的变量声明将可以正常工作。
-    // 注：变量赋值为 `true` 不会提升。
-    function example() {
-      console.log(declaredButNotAssigned); // => undefined
-      var declaredButNotAssigned = true;
-    }
-
-    // 解释器会把变量声明提升到作用域顶部，意味着我们的例子将被重写成：
-    function example() {
-      var declaredButNotAssigned;
-      console.log(declaredButNotAssigned); // => undefined
-      declaredButNotAssigned = true;
-    }
-    ```
-
-  - 匿名函数表达式会提升它们的变量名，但不会提升函数的赋值。
-
-    ```javascript
-    function example() {
-      console.log(anonymous); // => undefined
-
-      anonymous(); // => TypeError anonymous is not a function
-
-      var anonymous = function () {
-        console.log('anonymous function expression');
-      };
-    }
-    ```
-
-  - 命名函数表达式会提升变量名，但不会提升函数名或函数体。
-
-    ```javascript
-    function example() {
-      console.log(named); // => undefined
-
-      named(); // => TypeError named is not a function
-
-      superPower(); // => ReferenceError superPower is not defined
-
-      var named = function superPower() {
-        console.log('Flying');
-      };
-    }
-
-    // 当函数名跟变量名一样时，表现也是如此。
-    function example() {
-      console.log(named); // => undefined
-
-      named(); // => TypeError named is not a function
-
-      var named = function named() {
-        console.log('named');
-      }
-    }
-    ```
-
-  - 函数声明提升它们的名字和函数体。
-
-    ```javascript
-    function example() {
-      superPower(); // => Flying
-
-      function superPower() {
-        console.log('Flying');
-      }
-    }
-    ```
-
-  - 了解更多信息在 [JavaScript Scoping & Hoisting](http://www.adequatelygood.com/2010/2/JavaScript-Scoping-and-Hoisting) by [Ben Cherry](http://www.adequatelygood.com/).
-
-**[⬆ 回到顶部](#table-of-contents)**
-
-
-
 ## <a name="comparison-operators--equality">比较运算符 & 等号</a>
 
   - 优先使用 `===` 和 `!==` 而不是 `==` 和 `!=`.
-  - 条件表达式例如 `if` 语句通过抽象方法 `ToBoolean` 强制计算它们的表达式并且总是遵守下面的规则：
-
-    + **对象** 被计算为 **true**
-    + **Undefined** 被计算为 **false**
-    + **Null** 被计算为 **false**
-    + **布尔值** 被计算为 **布尔的值**
-    + **数字** 如果是 **+0、-0 或 NaN** 被计算为 **false**，否则为 **true**
-    + **字符串** 如果是空字符串 `''` 被计算为 **false**，否则为 **true**
-
-    ```javascript
-    if ([0]) {
-      // true
-      // 一个数组就是一个对象，对象被计算为 true
-    }
-    ```
-
   - 使用快捷方式。
 
     ```javascript
@@ -600,22 +500,11 @@
 
   - 使用大括号包裹所有的多行代码块。
 
-    ```javascript
-    // bad
-    if (test)
-      return false;
-
-    // good
-    if (test) return false;
-
+    ```
     // good
     if (test) {
       return false;
     }
-
-    // bad
-    function () { return false; }
-
     // good
     function () {
       return false;
@@ -1180,8 +1069,8 @@
       };
     }
 
-    // bad
-    function () {
+    // good
+    function () {
       var that = this;
       return function () {
         console.log(that);
@@ -1203,21 +1092,6 @@
       }.bind(this);
     }
     ```
-
-  - 给函数命名。这在做堆栈轨迹时很有帮助。
-
-    ```javascript
-    // bad
-    var log = function (msg) {
-      console.log(msg);
-    };
-
-    // good
-    var log = function log(msg) {
-      console.log(msg);
-    };
-    ```
-
   - **注：** IE8 及以下版本对命名函数表达式的处理有些怪异。了解更多信息到 [http://kangax.github.io/nfe/](http://kangax.github.io/nfe/)。
 
   - 如果你的文件导出一个类，你的文件名应该与类名完全相同。
