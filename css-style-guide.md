@@ -61,12 +61,6 @@ alert(document.getElementById('foo').tagName);
 .m-box{background:url(bg.png);}
 .m-box:after{content:'.';}
 ```
-- url() 函数中的绝对路径可省去协议名。
-```
-body {
-    background: url(//baidu.com/img/bg.png) no-repeat 0 0;
-}
-```
 
 ##### 注释格式：/* 注释文字 */
 1. 对选择器的注释统一写在被注释对象的上一行，对属性及值的注释写于分号后。
@@ -196,7 +190,7 @@ article {
 .u-tab li{margin:0 3px;}
 .u-tab li a{padding:0 6px;}
 ```
-##### 如果CSS可以做到，就不要使用JS
+##### 如果CSS可以做到，就不要使用JS（选择性使用）
 让CSS做更多的事，减轻JS开发量。
 - 用CSS控制交互或视觉的变化，JS只需要更改className。
 - 利用CSS一次性更改多个节点样式，避免多次渲染，提高渲染效率。
@@ -432,12 +426,10 @@ h1 {
 |选项卡	|tab|	tab|
 |标题区|	head/title|	hd/tt|
 |内容区	|body/content|	bd/ct|
-|列表|	list	|lst|
 |表格	|table|	tb|
 |表单|	form|	fm|
 |热点|	hot	|hot|
 |排行	|top	|top|
-|登录|	login	|log|
 |标志	|logo|	logo|
 |广告	|advertise|	ad|
 |搜索	|search|	sch|
@@ -446,11 +438,11 @@ h1 {
 |帮助	|help|	help|
 |新闻|	news|	|news|
 |下载|	download	|dld|
-|注册|	regist|	reg|
+|注册|	regist|	|
 |投票|	vote|	vote|
 |版权	|copyright|	cprt|
 |结果|	result|	rst|
-|标题|	title|	tt|
+|标题|	title|	|
 |按钮|	button|	btn|
 |输入|	input	|ipt|
 
