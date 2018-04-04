@@ -1,15 +1,12 @@
-### <font color=red>important </font> 
+﻿### <font color=red>important </font> 
 <h3>每天下班时提交代码，上班时更新代码</h3>
-
-
 
 ## 代码规范
 #### html规范： [html-style-guide](https://github.com/onlyH/Style-Guide/blob/master/html-style-guide.md)
-#### css规范 ：[css-style-guide](https://github.com/onlyH/Style-Guide/blob/master/css-style-guide.md)
+#### css规范 ：[css-style-guide](https://github.com/onlyH/Style-Guide/blob/master/css-style-guide.md)[公共样式采取normalize.css]
 #### javascript规范： [javascript-style-guide](https://github.com/onlyH/Style-Guide/blob/master/css-style-guide.md)
-#### vue规范： 请参考vue文档 [vue风格指南](https://cn.vuejs.org/v2/style-guide/)，[github](https://github.com/pablohpsilva/vuejs-component-style-guide/blob/master/README-CN.md)
+#### vue规范： [vue-style-guide](https://github.com/onlyH/Style-Guide/blob/master/vue-style-guide.md)
 #### 语言包中key的命名规则：
-
 ##### 共分三级
 - 规范：第一级_第二级_第三级
 例：nearby_tip_1
@@ -29,3 +26,5 @@
 3. btn（button、navigationBar等可点区）
 
 - 第三极：在上面的基础上加1、2、3……
+
+
