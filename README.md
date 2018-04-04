@@ -1,5 +1,5 @@
 ### important
-<h3>每天下班前提交代码，上班时第一时间更新代码</h3>
+<h3><font color=red >每天下班前提交代码，上班时第一时间更新代码</font></h3>
 
 ## 代码规范
 #### html规范： [html-style-guide](https://github.com/onlyH/Style-Guide/blob/master/html-style-guide.md)
