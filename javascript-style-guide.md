@@ -1,7 +1,7 @@
 
 *JavaScript规范*
 
-## 目录
+## <a name="table-of-contents">目录</a>
 
   1. [类型](#types)
   1. [对象](#objects)
