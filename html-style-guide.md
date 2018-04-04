@@ -96,6 +96,9 @@
 1. 属性和值全部小写，每个属性都必须有一个值，每个值必须加双引号。
 2. 没有值的属性必须使用自己的名称做为值（checked、disabled、readonly、selected等等）。
 3. 可以省略style标签和script标签的type属性。
+```
+text/css 和 text/javascript 是 type 的默认值。
+```
 
 ##### 常用的标签
 | 标签 | 语义 | 嵌套常见错误 | 常用属性（加粗的为不可缺少的或建议的) |
@@ -178,10 +181,7 @@
 ```
 <link rel="stylesheet" href="page.css">
 ```
-##### 引入 CSS 和 JavaScript 时无须指明 type 属性。
-```
-text/css 和 text/javascript 是 type 的默认值。
-```
+
 #####  JavaScript 应当放在页面末尾，或采用异步加载。
 将 script 放在页面中间将阻断页面的渲染。出于性能方面的考虑，如非必要，请遵守此条建议。
 ```
