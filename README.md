@@ -1,5 +1,5 @@
-<font color=red>important </font> 
-<h3>每天下班前提交代码，上班时第一时间更新代码</h3>
+### <font color=red>important </font> 
+<h3>每天下班时提交代码，上班时更新代码</h3>
 
 
 
